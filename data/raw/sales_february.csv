@@ -1,0 +1,8 @@
+order_id,order_date,customer_name,state,product_category,sales_amount,quantity,returned,region
+B-2001,2024-02-01,Acme corp,California,Technology,1300,2,No,west
+B-2002,02/02/2024,Globex ,NY,Office Supplies, 325.75 ,5,No,EAST
+B-2003,2024-02-03,Initech,Texas,Furniture,905.10,1,No,South
+B-2004,2024/02/04,Umbrella Inc,CA,Tech,2200.00,3,Yes,West
+B-2005,2024-02-05,Stark Industries,WA,Office,470.25,4,No,West
+B-2006,2024-02-06,Wayne Enterprises,FL,Technology,1500.00,-1,No,South
+B-2007,2024-02-07,Wonka LLC,New York,Furniture,790.00,1,No,East

@@ -1,0 +1,6 @@
+metric,value
+raw_rows,22
+clean_rows,4
+rejected_rows,29
+distinct_orders_clean,4
+distinct_customers_clean,4

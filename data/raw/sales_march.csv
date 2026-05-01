@@ -1,0 +1,8 @@
+ORDER_ID,ORDERDATE,CUSTOMER,STATE_NAME,CATEGORY,AMOUNT,QTY,RETURN_FLAG,REGION_NAME
+C-3001,2024-03-01,Acme Corp,ca,tech,1350.00,2,false,West
+C-3002,03/02/2024,Globex,NY,office supplies,330.00,5,false,East
+C-3003,2024-03-03,Initech,TX,furniture,915.25,1,false,South
+C-3004,2024-03-04,Umbrella Inc,California,Technology,2300.00,3,true,West
+C-3005,2024-03-05,Stark Industries,Washington,Office Supplies,480.50,4,false,West
+C-3006,2024-03-06,Wayne Enterprises,FL,Technology,1525.00,2,false,South
+C-3007,2024-03-07,Wonka LLC,new york,Furn.,800.00,1,false,East
