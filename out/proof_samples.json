@@ -1,0 +1,78 @@
+{
+  "clean_head": [
+    {
+      "invoice": "489434",
+      "stock_code": "85048",
+      "description": "15CM CHRISTMAS GLASS BALL 20 LIGHTS",
+      "quantity": 12,
+      "invoice_date": "2009-12-01T07:45:00.000Z",
+      "invoice_month": "2009-12",
+      "unit_price": 6.95,
+      "customer_id": "13085",
+      "country": "United Kingdom",
+      "line_revenue": 83.4
+    },
+    {
+      "invoice": "489434",
+      "stock_code": "79323P",
+      "description": "PINK CHERRY LIGHTS",
+      "quantity": 12,
+      "invoice_date": "2009-12-01T07:45:00.000Z",
+      "invoice_month": "2009-12",
+      "unit_price": 6.75,
+      "customer_id": "13085",
+      "country": "United Kingdom",
+      "line_revenue": 81
+    }
+  ],
+  "rejected_examples": {
+    "cancelled_invoice": {
+      "invoice": "C489449",
+      "stock_code": "22087",
+      "description": "PAPER BUNTING WHITE LACE",
+      "quantity": -12,
+      "invoice_date": "2009-12-01T10:33:00.000Z",
+      "unit_price": 2.95,
+      "customer_id": "16321",
+      "country": "Australia",
+      "line_revenue": -35.4,
+      "rejection_reason": "cancelled_invoice"
+    },
+    "missing_customer_id": {
+      "invoice": "489464",
+      "stock_code": "21733",
+      "description": "85123a mixed",
+      "quantity": 32,
+      "invoice_date": "2009-12-01T10:51:00.000Z",
+      "unit_price": 0.84,
+      "customer_id": "",
+      "country": "United Kingdom",
+      "line_revenue": 26.88,
+      "rejection_reason": "missing_customer_id"
+    },
+    "duplicate_row": {
+      "invoice": "489517",
+      "stock_code": "21912",
+      "description": "VINTAGE SNAKES & LADDERS",
+      "quantity": 1,
+      "invoice_date": "2009-12-01T11:04:00.000Z",
+      "unit_price": 3.75,
+      "customer_id": "17548",
+      "country": "United Kingdom",
+      "line_revenue": 3.75,
+      "rejection_reason": "duplicate_row"
+    },
+    "non_positive_price": {
+      "invoice": "489825",
+      "stock_code": "22076",
+      "description": "6 RIBBONS EMPIRE",
+      "quantity": 1,
+      "invoice_date": "2009-12-02T08:36:00.000Z",
+      "unit_price": 0,
+      "customer_id": "18102",
+      "country": "United Kingdom",
+      "line_revenue": 0,
+      "rejection_reason": "non_positive_price"
+    }
+  }
+}

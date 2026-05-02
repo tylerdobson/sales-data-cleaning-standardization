@@ -1,9 +1,0 @@
-Order ID,Order Date,Customer Name,State,Product Category,Sales Amount,Quantity,Returned,Region
-A-1001,2024-01-02, Acme Corp ,CA,tech,$1,250.00,2,N,West
-A-1002,01/03/2024,Globex,new york,office supplies,$315.50,5,N,East
-A-1003,2024/01/04,Initech,TX,Furn.,$899.99,1,N,South
-A-1004,1-05-2024,Umbrella Inc,calif.,technology,$2,100.00,3,Y,West
-A-1005,2024-01-06,Stark Industries,WA,office,$450.00,4,N,West
-A-1006,2024-01-06,Stark Industries,WA,office,$450.00,4,N,West
-A-1007,2024-01-07,Wayne Enterprises,Florida,tech,$bad,2,N,South
-A-1008,,Wonka LLC,NY,furniture,$780.00,1,N,East
