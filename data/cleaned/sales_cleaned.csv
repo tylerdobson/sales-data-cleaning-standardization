@@ -1,5 +1,0 @@
-order_id,order_date,customer_name,state,product_category,sales_amount,quantity,returned,region,source_file
-B-2001,2024-02-01,Acme Corp,California,Technology,1300.0,2.0,No,West,sales_february.csv
-B-2003,2024-02-03,Initech,Texas,Furniture,905.1,1.0,No,South,sales_february.csv
-B-2005,2024-02-05,Stark Industries,Washington,Office Supplies,470.25,4.0,No,West,sales_february.csv
-B-2007,2024-02-07,Wonka Llc,New York,Furniture,790.0,1.0,No,East,sales_february.csv

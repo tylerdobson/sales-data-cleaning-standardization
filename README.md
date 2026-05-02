@@ -1,144 +1,63 @@
-# Sales Data Cleaning and Standardization
+# Sales Cleaning Standardization
 
-## Overview
+A real-data cleaning project built on the UCI Online Retail II dataset.
 
-I built this project to show that I can take messy business sales data and turn it into something clean, validated, and analysis-ready. The project simulates a real-world scenario where monthly sales exports arrive in inconsistent formats and need to be standardized before they can be used for reporting.
+## What this proves
 
-I used Python to load multiple messy CSV files, standardize columns and values, separate bad records from valid ones, publish clean outputs to CSV and SQLite, and generate a short data-quality report.
+This project takes messy retail line items and turns them into a clean, documented, analysis-ready dataset with repeatable rules and audit evidence.
 
----
+Real audit results from the build:
 
-## Why I Built This Project
+- Input rows: `525,461`
+- Clean rows: `400,916`
+- Rejected rows: `124,545`
+- Net revenue after cleaning: `$8,798,233.74`
+- Gross line revenue scanned: `$9,539,484.63`
+- Cancelled line revenue excluded: `$629,855.37`
 
-I wanted a portfolio project that showed practical data-cleaning skills, not just analysis after the data was already perfect. In real work, raw files usually have inconsistent column names, mixed date formats, duplicate records, invalid values, and messy business labels. This project shows how I would handle that process.
+## Cleaning rules
 
----
+The pipeline standardizes and validates each row using practical retail rules:
 
-## Tools Used
+- trim text fields and normalize country names
+- parse UK-style invoice timestamps
+- reject cancelled invoices
+- reject missing customer IDs
+- reject non-positive quantities
+- reject non-positive prices
+- reject duplicate rows after normalization
+- write a clean CSV, a rejected CSV, a compact SQLite audit mart, and proof images
 
-- Python
-- Pandas
-- CSV
-- SQLite
-- Markdown
+## Proof pack
 
----
+The repo includes generated evidence under `out/proof/`:
 
-## Repository Structure
+- [audit-summary.png](./out/proof/audit-summary.png)
+- [market-structure.png](./out/proof/market-structure.png)
+- [sample-rows.png](./out/proof/sample-rows.png)
 
-```text
-sales-data-cleaning-standardization/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── data/
-│   ├── raw/
-│   ├── cleaned/
-│   └── reference/
-├── outputs/
-│   ├── reports/
-│   └── sqlite/
-├── src/
-│   ├── run_cleaning_pipeline.py
-│   ├── load_data.py
-│   ├── clean_columns.py
-│   ├── standardize_values.py
-│   ├── validate_data.py
-│   ├── deduplicate.py
-│   ├── build_outputs.py
-│   └── utils.py
-├── sql/
-│   └── analysis_queries.sql
-├── docs/
-│   ├── architecture.md
-│   ├── data_dictionary.md
-│   ├── github_setup.md
-│   └── resume_bullets.md
-└── tests/
-    └── test_cleaning_rules.py
-```
+## Reproducible build
 
----
+1. Run `node src/process-online-retail-ii.mjs`
+2. Run `powershell -NoProfile -ExecutionPolicy Bypass -File src/render-proof.ps1`
 
-## Business Scenario
+The processor uses the real Online Retail II CSV mirror and writes the cleaned dataset, rejected rows, SQLite audit mart, summary JSON, and markdown report.
 
-This project assumes I receive messy sales exports from different reporting periods. Each file has different formatting and quality problems. My job is to preserve the raw files, apply consistent cleaning rules, reject invalid records, and create a final dataset that could be used for downstream reporting.
+## Repository layout
 
----
+- `src/process-online-retail-ii.mjs` regenerates the dataset and audit artifacts
+- `src/render-proof.ps1` renders the proof images
+- `out/` contains the generated audit evidence
+- `docs/` contains the supporting case-study writeup
+- `sql/analysis_queries.sql` contains SQL used for review
+- `tests/cleaning_rules.test.mjs` checks the core cleaning rules
 
-## Cleaning Rules
+## Source
 
-The pipeline:
-- standardizes column names across files
-- trims whitespace
-- standardizes customer names
-- maps inconsistent state values to one standard form
-- maps category variations to one standard form
-- parses dates into a consistent format
-- converts sales amounts to numeric values
-- converts quantity to numeric values
-- standardizes return flags
-- separates duplicate rows
-- rejects invalid business records
+UCI Online Retail II mirror:
 
----
+https://raw.githubusercontent.com/PacktWorkshops/The-Data-Analysis-Workshop/master/Chapter08/Datasets/online_retail_II.csv
 
-## How to Run
+## Interview summary
 
-```bash
-python -m src.run_cleaning_pipeline
-```
-
-After the run, review:
-- `data/cleaned/sales_cleaned.csv`
-- `data/cleaned/sales_rejected.csv`
-- `data/cleaned/data_quality_summary.csv`
-- `outputs/sqlite/sales_cleaning.db`
-- `outputs/reports/cleaning_report.md`
-
----
-
-## Main Outputs
-
-### Clean dataset
-- `data/cleaned/sales_cleaned.csv`
-
-### Rejected records
-- `data/cleaned/sales_rejected.csv`
-
-### Data quality summary
-- `data/cleaned/data_quality_summary.csv`
-
-### SQLite output
-- `outputs/sqlite/sales_cleaning.db`
-
-### Quality report
-- `outputs/reports/cleaning_report.md`
-
----
-
-## SQLite Tables
-
-- `fact_sales_clean`
-- `fact_sales_rejected`
-- `audit_data_quality_summary`
-
----
-
-## What This Project Demonstrates
-
-This project demonstrates:
-- practical data cleaning
-- repeatable transformation logic
-- data validation
-- deduplication
-- rejected-row handling
-- CSV publishing
-- SQLite loading
-- project documentation
-
----
-
-## How I Would Explain This In an Interview
-
-I would describe this as a practical data-cleaning and standardization project. I built a Python pipeline that takes messy monthly sales exports, applies consistent cleaning rules, separates invalid records, and publishes both clean and rejected outputs. I also wrote the cleaned data to SQLite so it can be reviewed with SQL after the transformation process is complete.
+This project shows that I can take a real retail feed, enforce business-quality rules, preserve rejected records for auditability, and ship a compact proof pack with actual numbers rather than toy examples.

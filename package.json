@@ -1,0 +1,9 @@
+{
+  "name": "sales-cleaning-standardization",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/process-online-retail-ii.mjs",
+    "proof": "powershell -NoProfile -ExecutionPolicy Bypass -File src/render-proof.ps1"
+  }
+}

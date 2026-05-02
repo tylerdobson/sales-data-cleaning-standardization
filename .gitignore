@@ -1,7 +1,0 @@
-__pycache__/
-*.pyc
-.venv/
-venv/
-outputs/sqlite/*.db
-data/cleaned/*.csv
-outputs/reports/*.md

@@ -1,0 +1,45 @@
+{
+  "source_url": "https://raw.githubusercontent.com/PacktWorkshops/The-Data-Analysis-Workshop/master/Chapter08/Datasets/online_retail_II.csv",
+  "source_file": "online_retail_II.csv",
+  "input_rows": 525461,
+  "clean_rows": 400916,
+  "rejected_rows": 124545,
+  "gross_line_revenue": 9539484.63,
+  "net_line_revenue": 8798233.74,
+  "cancelled_line_revenue": 629855.37,
+  "rejection_breakdown": {
+    "missing_customer_id": 107560,
+    "cancelled_invoice": 10206,
+    "duplicate_row": 6748,
+    "non_positive_price": 31
+  },
+  "top_countries": [
+    { "country": "United Kingdom", "revenue": 7381644.43 },
+    { "country": "EIRE", "revenue": 356041.86 },
+    { "country": "Netherlands", "revenue": 268784.35 },
+    { "country": "Germany", "revenue": 202025.39 },
+    { "country": "France", "revenue": 146107.07 }
+  ],
+  "top_products": [
+    { "stock_code": "85123A", "revenue": 151339.16 },
+    { "stock_code": "22423", "revenue": 143727.60 },
+    { "stock_code": "M", "revenue": 98531.99 },
+    { "stock_code": "85099B", "revenue": 85257.45 },
+    { "stock_code": "84879", "revenue": 70291.03 }
+  ],
+  "monthly_trend": [
+    { "month": "2009-12", "month_label": "Dec 2009", "revenue": 683504.01 },
+    { "month": "2010-01", "month_label": "Jan 2010", "revenue": 555802.67 },
+    { "month": "2010-02", "month_label": "Feb 2010", "revenue": 504558.96 },
+    { "month": "2010-03", "month_label": "Mar 2010", "revenue": 696978.47 },
+    { "month": "2010-04", "month_label": "Apr 2010", "revenue": 591982.00 },
+    { "month": "2010-05", "month_label": "May 2010", "revenue": 597833.38 },
+    { "month": "2010-06", "month_label": "Jun 2010", "revenue": 636371.13 },
+    { "month": "2010-07", "month_label": "Jul 2010", "revenue": 589736.17 },
+    { "month": "2010-08", "month_label": "Aug 2010", "revenue": 602224.60 },
+    { "month": "2010-09", "month_label": "Sep 2010", "revenue": 829013.95 },
+    { "month": "2010-10", "month_label": "Oct 2010", "revenue": 1033112.01 },
+    { "month": "2010-11", "month_label": "Nov 2010", "revenue": 1166460.02 },
+    { "month": "2010-12", "month_label": "Dec 2010", "revenue": 310656.37 }
+  ]
+}

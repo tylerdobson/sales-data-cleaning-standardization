@@ -1,21 +1,22 @@
 # Architecture
 
-## Summary
+```mermaid
+flowchart LR
+  A[Real Online Retail II CSV] --> B[Process script]
+  B --> C[Cleaned CSV]
+  B --> D[Rejected CSV]
+  B --> E[SQLite audit mart]
+  B --> F[Audit JSON]
+  F --> G[Proof images]
+  C --> H[Portfolio-ready analysis]
+  D --> H
+  E --> H
+  G --> H
+```
 
-This project simulates a real business data-cleaning workflow for messy retail sales exports.
+## Design choices
 
-## Flow
-
-1. Load multiple raw CSV files from `data/raw/`
-2. Standardize inconsistent column names
-3. Clean and standardize business values
-4. Deduplicate repeated orders
-5. Separate invalid records from valid records
-6. Publish cleaned data to CSV and SQLite
-7. Generate a markdown quality report
-
-## Output Tables
-
-- `fact_sales_clean`
-- `fact_sales_rejected`
-- `audit_data_quality_summary`
+- Keep the pipeline script-first so it is reproducible without notebooks.
+- Store rejected rows instead of discarding them so the audit trail is visible.
+- Generate proof images directly from the computed summary so the visuals cannot drift away from the numbers.
+- Keep the bundled SQLite file compact and reviewable rather than shipping a giant binary artifact.
